@@ -69,7 +69,7 @@ getRepos();
 const displayRepos = function (repos) {
     filterInput.classList.remove('hide');
     for (const repo of repos) {
-        if (repo.name == "projects") 
+        if (repo.name == 'projects') 
             continue; 
 
         let listItem = document.createElement('li');
