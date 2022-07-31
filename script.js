@@ -30,7 +30,7 @@ const displayProfile = function (profile) {
         </figure>
         <div>
             <h2><a href=${profile.blog}><strong>${profile.name}</strong></a></h2>
-            <p>${profile.bio}aaa</p>
+            <p>${profile.bio}</p>
             <p>
                 <strong>Location:</strong> ${profile.location}
             </p>
@@ -69,6 +69,9 @@ getRepos();
 const displayRepos = function (repos) {
     filterInput.classList.remove('hide');
     for (const repo of repos) {
+        if (repo.name == "projects") 
+            continue; 
+
         let listItem = document.createElement('li');
         listItem.classList.add('repo');
         listItem.innerHTML = `
