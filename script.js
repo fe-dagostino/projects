@@ -23,6 +23,7 @@ getProfile();
 
 // display infomation from github profile
 const displayProfile = function (profile) {
+    let nb_repos = profile.public_repos - 1;
     const userInfo = document.querySelector('.user-info');
     userInfo.innerHTML = `
         <figure>
@@ -36,7 +37,7 @@ const displayProfile = function (profile) {
             </p>
             <p>
                 <strong>@${profile.login} </strong>
-                Repos: ${profile.public_repos}-1
+                Repos: ${nb_repos}
                 Gists: ${profile.public_gists}
             </p>
         </div>
