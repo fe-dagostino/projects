@@ -1,5 +1,5 @@
 const username = 'fe-dagostino';
-const maxPages = 2;
+const maxPages = 1;
 const repoList = document.querySelector('.repo-list');
 const reposSection = document.querySelector('.repos');
 const filterInput = document.querySelector('.filter-repos');
@@ -36,7 +36,7 @@ const displayProfile = function (profile) {
             </p>
             <p>
                 <strong>@${profile.login} </strong>
-                Repos: ${profile.public_repos}
+                Repos: ${profile.public_repos}-1
                 Gists: ${profile.public_gists}
             </p>
         </div>
